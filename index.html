@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zyx Sun</title>
+	<link rel="stylesheet" href="css/uikit.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" href="css/animate.css">
+	<script src="js/uikit.min.js"></script>
+	<script src="js/uikit-icons.min.js"></script>
+
+	<script src="js/progressBar.js"></script>
+	<script src="js/progressBarHandler.js"></script>
+	<script src="js/main.js"></script>
+
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+<style>
+	{ margin: 0; padding: 0; }
+
+    html { 
+       /* background: url('img/background.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;*/
+        background-color: #1d2120; 
+    }
+  	.sliding-middle-out {
+		display: inline-block;
+		position: relative;
+		padding-bottom: 1px;
+	}
+	.sliding-middle-out:after {
+		content: '';
+		display: block;
+		margin: auto;
+		height: 2px;
+		width: 0px;
+		background: transparent;
+		transition: width .5s ease, background-color .5s ease;
+	}
+	.sliding-middle-out:hover:after {
+		width: 100%;
+		background: #1abc9c;
+	}
+    .loader {
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: 9999;
+		background: url('img/loader2.gif') 50% 50% no-repeat rgb(249,249,249);
+	}
+	.uk-navbar-nav>li>a:hover {
+	    color: #1abc9c;
+	    outline: 0
+	}
+	.navgray{
+		background-color: #22313F; 
+	}
+	.uk-nav>li.uk-active>a {
+	    color: #1abc9c !important
+	}
+	.txtTurq{
+		color: #1abc9c	
+	}
+	.sectHeight{
+		min-height:1000px;
+		padding-top:100px;
+	}
+	.skill{
+		font-size:20pt;
+		font-weight:bold;
+	}
+	.knowButton:hover{
+		color: #1abc9c;
+	}
+	.yellow{
+		color:#F7D969;
+	}
+	.linkTxt{
+		color: #2f2f2f;
+	}
+</style>
+</head>
+<body>
+	<div class="loader"></div>
+	<nav class="uk-navbar-transparent uk-padding-large uk-padding-remove-top uk-padding-remove-bottom" uk-navbar  uk-sticky="">
+	    <div class="uk-navbar-left">
+	        <ul class="uk-navbar-nav">
+	        	<li style="padding-top:20px;">
+	                <a id="menu" class=" uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-nav"> <span uk-icon="icon: menu; ratio:2.5" style="padding-right:10px;"></span>Menu</a>
+	            </li>
+	        </ul>
+	    </div>
+	</nav>
+
+	<div class="uk-offcanvas-content" uk-navbar="mode: click; offset:0;" >
+
+	    <div id="offcanvas-nav" uk-offcanvas="overlay: false; flip: false; mode: reveal;" uk-scrollspy-nav="closest: li; offset:75">
+	    	
+	        <div class="uk-offcanvas-bar">
+	        <button class="uk-offcanvas-close" type="button" uk-close></button>
+	        	<ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+		            <li id="zyxParent" class="sliding-middle-out">
+		            	<a id="homeLink" href="#home" uk-scroll>Zyx Sun</a>
+		            </li>
+		        </ul>
+
+	            <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+		            <li class="sliding-middle-out"><a id="aboutLink" href="#about" uk-scroll>About</a></li>
+	            </ul>
+
+	            <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+	            	<li class="sliding-middle-out"><a id="workLink" href="#work" uk-scroll>Works</a></li>
+	            </ul>
+
+	            <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+	            	<li class="sliding-middle-out"><a id="contactLink" href="#contact" uk-scroll><span class="">Contact</span></a></li>
+	            </ul>
+	        </div>
+	    </div>
+	</div>
+
+	<div id="home">
+		<div class="uk-text-center uk-padding-large" style="min-height:650px;">
+			<h3 class="uk-light" style="color:#e74c3c;">
+				<span uk-icon="icon: cog"></span>
+				This website is currently under construction
+				<span uk-icon="icon: cog"></span>
+			</h3>
+			<img class="animated pulse" src="img/logo.png" width="200" height="200">
+			<div>
+				<div>
+				<h1 class="uk-light">Hi, I'm Nowell Zyx Sun</h1></div>
+				<h3 class="uk-light">A Junior Developer and I specialize in making</h3>
+				<div id="specialize" class="animated infinite pulse">
+					<span class="uk-light txtTurq skill">Websites and Games</span>
+				</div>
+			</div>
+			<div style="padding-top:140px;">
+				<a class="uk-button uk-button-default uk-light knowButton sliding-middle-out" href="#about" uk-scroll>Know more about me</a>
+			</div>
+		</div>
+		
+	</div>
+
+	<div class="section" id="about">
+		<div class="uk-padding-large sectHeight" style="background: #336E7B">
+			<h1 class="uk-text-center uk-light">About</h1>
+			<hr class="uk-divider-icon">
+			<div class="uk-text-center">
+				<img class="uk-border-circle" src="img/profile.jpg" width="200" height="200" alt="Me">
+			</div>
+			<div class="uk-padding-large uk-light uk-text-center" style="line-height:270%; font-weight: bold">
+				21 years old, from Tagum City, Davao del Norte, Philippines <br/>
+				A web/game developer that aims to succeed in an environment of growth and excellence and earn job which provides job satisfaction that will result in achieving personal as well as organizational goals. A quick learner, has excellent logic skills, and excited to learn new things especially in programming.
+
+			</div>
+			<div class="uk-text-center">
+				<div class="sliding-middle-out">
+					<button id="skillSummaryButton" class="uk-button uk-button-secondary uk-light knowButton">Skill Summary</button>
+				</div>
+			</div>
+			<div id="skillSummary" class="uk-grid-small uk-child-width-1-2 uk-child-width-1-4@s uk-flex-center uk-text-center" uk-grid>
+			    <div class="uk-padding-large">
+			    	<h5 class="uk-light uk-text-bold">HTML/CSS</h5>
+			        <div id="skill-html"></div>
+			    </div>
+			    <div class="uk-padding-large">
+			        <h5 class="uk-light uk-text-bold">Bootstrap</h5>
+			        <div id="skill-bootstrap"></div>
+			    </div>
+			    <div class="uk-padding-large">
+			        <h5 class="uk-light uk-text-bold uk-text-bold">Materialize</h5>
+			        <div id="skill-materialize"></div>
+			    </div>
+			    <div class="uk-padding-large">
+			        <h5 class="uk-light uk-text-bold">Javascript/JQuery</h5>
+			        <div id="skill-js"></div>
+			    </div>
+			    <div class="uk-padding-large">
+			       	<h5 class="uk-light uk-text-bold">UIkit</h5>
+			        <div id="skill-uikit"></div>
+			    </div>
+			    <div class="uk-padding-large">
+			       	<h5 class="uk-light uk-text-bold">MySQL/SQLite</h5>
+			        <div id="skill-sql"></div>
+			    </div>
+			    <div class="uk-padding-large">
+			        <h5 class="uk-light uk-text-bold">VB.Net</h5>
+			        <div id="skill-vb"></div>
+			    </div>
+			    <div class="uk-padding-large">
+			        <h5 class="uk-light uk-text-bold">PHP</h5>
+			        <div id="skill-php"></div>
+			    </div>
+			    <div class="uk-padding-large">
+			       	<h5 class="uk-light uk-text-bold">C# (Unity 3.x)</h5>
+			        <div id="skill-csharp"></div>
+			    </div>
+			    <div class="uk-padding-large">
+			       	<h5 class="uk-light uk-text-bold">AngularJS 1.x</h5>
+			        <div id="skill-angular"></div>
+			    </div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section" id="work">
+		<div class="uk-padding-large sectHeight" style="background: #363636;">
+			<h1 class="uk-text-center uk-light">Works</h1>
+			<hr class="uk-divider-icon">
+			<div class="uk-child-width-1-1 uk-child-width-1-2@m uk-grid-match uk-grid-small" uk-grid>
+			   <div class="uk-text-center" uk-scrollspy="cls: uk-animation-slide-left; target: > div ; repeat: false; delay: 500">
+			        <div class="uk-inline-clip uk-transition-toggle uk-light">
+			            <img class="uk-transition-scale-up uk-transition-opaque uk-border-rounded" src="img/ming-store.png" alt="">
+			            <div class="uk-transition-fade uk-position-cover uk-position-small uk-overlay uk-overlay-primary uk-flex uk-flex-center uk-flex-middle">
+				            <div class="uk-position-center">
+				            	<div class="uk-transition-slide-top-small">
+				            		<h3 style="color:#1abc9c">Inventory Management System</h3>
+				            	</div>
+				                <div class="uk-transition-slide-left-small">
+				                	<span uk-icon="icon: tag"></span>VB.NET
+				                	<span class="uk-margin-small-left" uk-icon="icon: tag"></span>MS SQL
+				                </div>
+				                <div class="uk-transition-slide-bottom-small" style="padding-top:30px;">
+				                	<button class="uk-button uk-button-default" href="#modal-inventory" uk-toggle>more..</button>
+				                </div>
+				            </div>
+			            </div>
+			        </div>
+
+			        <div id="modal-inventory" class="uk-modal-full" uk-modal>
+					    <div class="uk-modal-dialog uk-background-secondary">
+					        <button class="uk-modal-close-full uk-close-large uk-background-secondary" type="button" uk-close></button>
+					        <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+					        	<div class="uk-background-cover" style="background-image: url('img/ming-store.png');" uk-height-viewport></div>
+					            <div class="uk-padding-large">
+					                <h1 class="uk-light">Inventory Management System</h1>
+					                <p>A system made with Visual Studio and VB.Net</p>
+					                <p>This is my very first medium-sized project during college</p>
+					                <!-- <button class="uk-button uk-button-default uk-light" href="#modal-inventory-photos" uk-toggle>Photos</button> -->
+					            </div>
+					        </div>
+					    </div>
+					</div>
+			    </div>
+
+			   	<div class="uk-text-center" uk-scrollspy="cls: uk-animation-slide-right; target: > div ; repeat: false; delay: 500">
+			        <div class="uk-inline-clip uk-transition-toggle uk-light">
+			            <img class="uk-transition-scale-up uk-transition-opaque uk-border-rounded" src="img/puzzle-palace.png" alt="">
+			            <div class="uk-transition-fade uk-position-cover uk-position-small uk-overlay uk-overlay-primary uk-flex uk-flex-center uk-flex-middle">
+				            <div class="uk-position-center">
+				            	<div class="uk-transition-slide-top-small">
+					            		<h3 style="color:#1abc9c">Puzzle Palace</h3>
+					            	</div>
+				                <div class="uk-transition-slide-right-small">
+					                <span uk-icon="icon: tag"></span>C#
+					                <span class="uk-margin-small-left" uk-icon="icon: tag"></span>Unity
+					                <span class="uk-margin-small-left" uk-icon="icon: tag"></span>SQLite
+				                </div>
+				                <div class="uk-transition-slide-bottom-small" style="padding-top:30px;">
+				                	<button class="uk-button uk-button-default" href="#modal-puzzlepalace" uk-toggle>more..</button>
+				                </div>
+				            </div>
+			            </div>
+			        </div>
+
+			        <div id="modal-puzzlepalace" class="uk-modal-full" uk-modal>
+					    <div class="uk-modal-dialog uk-background-secondary">
+					        <button class="uk-modal-close-full uk-close-large uk-background-secondary" type="button" uk-close></button>
+					        <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+					        	<div class="uk-background-cover" style="background-image: url('img/puzzle-palace-icon.png');" uk-height-viewport></div>
+					            <div class="uk-padding-large">
+					                <h1 class="uk-light">Puzzle Palace</h1>
+					                <p>Is a 3d puzzle game made with Unity3d</p>
+					                <p>It is also the thesis project that I made for my school during my college</p>
+					                <!-- <button class="uk-button uk-button-default uk-light" href="#modal-puzzlepalace-photos" uk-toggle>Photos</button> -->
+					            </div>
+					        </div>
+					    </div>
+					</div>
+
+					<!-- <div id="modal-puzzlepalace-photos" class="uk-modal-full" uk-modal>
+					    <div class="uk-modal-dialog uk-background-secondary" uk-height-viewport>
+					        <button class="uk-modal-close-full uk-close-large uk-background-secondary" type="button" href="#modal-puzzlepalace" uk-close uk-toggle></button>
+					       <div class="uk-modal-body uk-background-secondary uk-text-center">
+					        	<h3 class="uk-light ">Puzzle Palace Photos</h3>
+				           		<img class="uk-align-center" src="img/puzzle-palace.png">
+				           		<a id="prevPuzzlePalace" class="uk-position-center-left uk-position-small uk-hidden-hover uk-slidenav-large uk-light" uk-slidenav-previous></a>
+        						<a id="nextPuzzlePalace" class="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large uk-light" uk-slidenav-next></a>
+        						<button class="uk-button uk-button-secondary uk-align-right"  href="#modal-puzzlepalace" uk-toggle>Go Back</button>
+					        </div>
+					    </div>
+					</div> -->
+
+			    </div>
+			    <!--  -->
+			    <div class="uk-text-center" uk-scrollspy="cls: uk-animation-slide-left; target: > div ; repeat: false; delay: 500">
+			        <div class="uk-inline-clip uk-transition-toggle uk-light">
+			            <img class="uk-transition-scale-up uk-transition-opaque uk-border-rounded" src="img/tasklogger.png" alt="">
+			            <div class="uk-transition-fade uk-position-cover uk-position-small uk-overlay uk-overlay-primary uk-flex uk-flex-center uk-flex-middle">
+				            <div class="uk-position-center">
+				            	<div class="uk-transition-slide-top-small">
+					            		<h3 style="color:#1abc9c">Task Logger</h3>
+					            	</div>
+				                <div class="uk-transition-slide-left-small">
+				                	<span uk-icon="icon: tag"></span>JQuery
+				                	<span class="uk-margin-small-left" uk-icon="icon: tag"></span>PHP
+				                	<span class="uk-margin-small-left" uk-icon="icon: tag"></span>AJAX
+				                	<span class="uk-margin-small-left" uk-icon="icon: tag"></span>MySQL
+				                	<span class="uk-margin-small-left" uk-icon="icon: tag"></span>MaterializeCSS
+				                </div>
+				                <div class="uk-transition-slide-bottom-small" style="padding-top:30px;">
+				                	<button class="uk-button uk-button-default uk-light" href="#modal-tasklogger" uk-toggle>more..</button>
+				                </div>
+				            </div>
+			            </div>
+			        </div>
+
+			        <div id="modal-tasklogger" class="uk-modal-full" uk-modal>
+					    <div class="uk-modal-dialog uk-background-secondary">
+					        <button class="uk-modal-close-full uk-close-large uk-background-secondary" type="button" uk-close></button>
+					        <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+					        	<div class="uk-background-cover" style="background-image: url('img/tasklogger2.png');" uk-height-viewport></div>
+					            <div class="uk-padding-large">
+					                <h1 class="uk-light">Peronal Task Logger</h1>
+					                <p>A mini web app I made using PHP, MySQL and JQuery AJAX</p>
+					                <p style="color:#26A65B;">DEMO coming soon! &nbsp; <span uk-icon="icon: future"></span>  </p>
+					                <!-- <button class="uk-button uk-button-default uk-light" href="#modal-inventory-photos" uk-toggle>Photos</button> -->
+					            </div>
+					        </div>
+					    </div>
+					</div>
+			    </div>
+			    <div class="uk-text-center" uk-scrollspy="cls: uk-animation-slide-right; target: > div ; repeat: false; delay: 500">
+			        <div class="uk-inline-clip uk-transition-toggle uk-light">
+			            <img class="uk-transition-scale-up uk-transition-opaque uk-border-rounded" src="img/poll.png" alt="">
+			            <div class="uk-transition-fade uk-position-cover uk-position-small uk-overlay uk-overlay-primary uk-flex uk-flex-center uk-flex-middle">
+				            <div class="uk-position-center">
+				            	<div class="uk-transition-slide-top-small">
+					            		<h3 style="color:#1abc9c">Online Poll</h3>
+					            	</div>
+				                <div class="uk-transition-slide-right-small">
+				                	<span uk-icon="icon: tag"></span>AngularJS
+				                	<span class="uk-margin-small-left" uk-icon="icon: tag"></span>JQuery
+				                	<span class="uk-margin-small-left" uk-icon="icon: tag"></span>PHP
+				                	<span class="uk-margin-small-left" uk-icon="icon: tag"></span>MySQL
+				                </div>
+				                <div class="uk-transition-slide-bottom-small" style="padding-top:30px;">
+				                	 <button class="uk-button uk-button-default uk-light" href="#modal-poll" uk-toggle>more..</button>
+				                </div>
+				            </div>
+			            </div>
+			        </div>
+
+			        <div id="modal-poll" class="uk-modal-full" uk-modal>
+					    <div class="uk-modal-dialog uk-background-secondary">
+					        <button class="uk-modal-close-full uk-close-large uk-background-secondary" type="button" uk-close></button>
+					        <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+					        	<div class="uk-background-cover" style="background-image: url('img/poll2.png');" uk-height-viewport></div>
+					            <div class="uk-padding-large">
+					            	<p style="color:#e74c3c;">
+					            		<span uk-icon="icon: cog"></span>
+										This is currently a work in progress
+										<span uk-icon="icon: cog"></span>
+									</p>
+
+					                <h1 class="uk-light">Online Poll</h1>
+					                <p>A web app I am making with AngularJS 1.x</p>
+
+					                <!-- <button class="uk-button uk-button-default uk-light" href="#modal-inventory-photos" uk-toggle>Photos</button> -->
+					            </div>
+					        </div>
+					    </div>
+					</div>
+			    </div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section" id="contact">
+		<div class="uk-padding-large" style="height: 670px; background: #2f2f2f; padding-top:100px;">
+			<h2 class="uk-text-center uk-light">Contact</h2>
+			<hr class="uk-divider-icon">
+			<form class="uk-width-1-2@m uk-vertical-align-middle uk-align-center">
+			    <fieldset class="uk-fieldset uk-padding-large uk-padding-remove-top uk-margin-remove-bottom">
+
+			        <h4 class="uk-light">Have anything to say?</h4>
+
+			        <h5 class="uk-light"> Fill the form below or send an email to <span class="sliding-middle-out">nz.sun03@gmail.com</span></h5>
+
+			        <div class="uk-margin">
+			            <input class="uk-input uk-background-secondary" type="text" placeholder="Name">
+			        </div>
+
+			        <div class="uk-margin">
+			            <input class="uk-input uk-background-secondary" type="text" placeholder="Email">
+			        </div>
+
+			        <div class="uk-margin">
+			            <textarea class="uk-textarea uk-background-secondary" rows="5" placeholder="Message"></textarea>
+			        </div>
+			        <div class="sliding-middle-out">
+			      	  	<button class="uk-button uk-button-secondary knowButton" href="#" disabled>Submit</button>
+			        </div>
+			    </fieldset>
+			</form>
+			<div class="uk-text-center">
+				<a id="toGithub" class="uk-margin-small-right" uk-icon="icon: github-alt; ratio:1.5;" style="color:gray"></a>
+				<a id="toFacebook" class="uk-margin-small-right" uk-icon="icon: facebook; ratio:1.5;" style="color:gray"></a>
+				<a id="toLinkedin" class="uk-margin-small-right" uk-icon="icon: linkedin; ratio:1.5;" style="color:gray"></a>
+				<a id="toInstagram" uk-icon="icon: instagram; ratio:1.5;" style="color:gray"></a>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="section" id="contact">
+		<div class="uk-padding-small uk-text-center" style="height: 95px; background: #1d2120;">
+			<img src="img/logo.png" width="50" height="50">
+			<div class="uk-text-middle">Handcrafted by me. &copy; 2017</div>
+			<div class="uk-text-middle">Powered by <a id="toUIkit" class="uk-link-reset">UIkit</a> and <a id="toAnimateCss" class="uk-link-reset">Animate.css</a></div>
+		</div>
+	</div>
+</body>
+</html>
